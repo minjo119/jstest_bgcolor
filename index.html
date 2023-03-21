@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    body{
+        background-color: aliceblue;
+    }
+    .bgcolor--blue {
+        background-color: aquamarine;
+    }
+    .bgcolor--gray {
+        background-color: rgb(255, 229, 127);
+    }
+    
+    .btns {
+        position: relative;
+        top: 60px;
+        width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <button class="btn_toggle">배경색상변경_토글버튼</button>
+        <button class="btn--reset">배경색상변경_리셋</button>
+        <button class="btn--bggray">배경색상변경_그레이</button>
+    </div>
+
+    <script>
+        const btnToggle = document.querySelector('.btn_toggle');
+        btnToggle.addEventListener('click', function() { 
+        document.body.classList.toggle('bgcolor--blue');
+        });
+
+        const btnGray = document.querySelector('.btn--bggray');
+        btnGray.addEventListener('click', function() { 
+        document.body.classList.add('bgcolor--gray');
+        })
+
+        const btnRest = document.querySelector('.btn--reset');
+        btnRest.addEventListener('click', function() { 
+        document.body.classList.remove('bgcolor--blue')
+        document.body.classList.remove('bgcolor--gray')
+        })
+        
+    </script>
+</body>
+</html>
